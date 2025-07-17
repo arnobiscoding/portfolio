@@ -17,7 +17,7 @@ export default function AboutHero() {
   return (
     <header role="banner" aria-label="About Sadman Biazid Arnob" className="min-h-screen flex flex-col items-center justify-center text-center gap-6 animate-in fade-in duration-1000 px-4">
       <img
-        src="/arnob.jpg"
+        src={`${import.meta.env.BASE_URL}arnob.jpg`}
         alt="Sadman Biazid Arnob portrait"
         className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover shadow-lg border-4 border-background mb-4"
         loading="lazy"

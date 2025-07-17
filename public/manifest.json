@@ -8,12 +8,12 @@
   "description": "Portfolio of Sadman Biazid Arnob - Software Engineer, React Developer, and Problem Solver.",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "favicon.ico",
       "sizes": "48x48 64x64 96x96 128x128 256x256",
       "type": "image/x-icon"
     },
     {
-      "src": "/arnob.jpg",
+      "src": "arnob.jpg",
       "sizes": "512x512",
       "type": "image/jpeg"
     }

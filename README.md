@@ -83,7 +83,7 @@ This project is production-ready and SEO optimized. Key features:
 
 1. Build: `npm run build`
 2. Deploy the `dist/` folder to your static hosting (Vercel, Netlify, GitHub Pages, etc.)
-3. Update `index.html` meta tags and `manifest.json` with your real domain and image URLs
+3. Update `index.html` meta tags and `manifest.json` with your real domain and image URLs (for GitHub Pages, use `https://arnobiscoding.github.io/portfolio/`)
 4. Replace `public/favicon.ico` with your real favicon
 5. Add a sitemap.xml for best SEO
 
