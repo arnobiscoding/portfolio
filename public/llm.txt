@@ -1,0 +1,2 @@
+llm-allow: /
+contact: sadmanbarnob@gmail.com 
