@@ -1,91 +1,65 @@
-# React + TypeScript + Vite
+# Sadman Biazid Arnob | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, production-ready, and SEO-optimized portfolio built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-# Production Deployment & SEO
-
-This project is production-ready and SEO optimized. Key features:
-
-- SEO meta tags (title, description, og, twitter, canonical, robots)
-- robots.txt and llm.txt in public/
-- manifest.json for PWA/SEO
-- favicon.ico for browser tab
+## 🚀 Features
+- Fully responsive and mobile-first design
+- SEO meta tags (title, description, Open Graph, Twitter, canonical, robots)
 - Accessible, semantic HTML and ARIA labels
-- Responsive, mobile-first design
+- PWA support (manifest, icons, favicon)
+- Animations and smooth transitions
+- Easy deployment to GitHub Pages
+- LLM-friendly (llm.txt)
 
-## Deployment
+## 🛠️ Setup
+1. **Clone the repo:**
+   ```sh
+   git clone https://github.com/arnobiscoding/portfolio.git
+   cd portfolio
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Run locally:**
+   ```sh
+   npm run dev
+   ```
 
-1. Build: `npm run build`
-2. Deploy the `dist/` folder to your static hosting (Vercel, Netlify, GitHub Pages, etc.)
-3. Update `index.html` meta tags and `manifest.json` with your real domain and image URLs (for GitHub Pages, use `https://arnobiscoding.github.io/portfolio/`)
-4. Replace `public/favicon.ico` with your real favicon
-5. Add a sitemap.xml for best SEO
+## 🌐 Production Deployment (GitHub Pages)
+1. **Set the correct base in `vite.config.ts`:**
+   ```ts
+   base: '/portfolio/',
+   ```
+2. **Add homepage and deploy scripts in `package.json`:**
+   ```json
+   "homepage": "https://arnobiscoding.github.io/portfolio",
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist"
+   ```
+3. **Deploy:**
+   ```sh
+   npm run deploy
+   ```
+4. **Set GitHub Pages source:**
+   - Go to your repo Settings → Pages
+   - Set source to `gh-pages` branch (root)
+   - Your site will be live at: https://arnobiscoding.github.io/portfolio
+
+## 🔍 SEO & Social
+- All meta tags use your real GitHub Pages URL
+- `manifest.json` and `robots.txt` are configured for best SEO
+- Add a `sitemap.xml` for even better discoverability
+
+## ♿ Accessibility
+- All interactive elements have descriptive `aria-label`s
+- Keyboard navigation and focus rings are supported
+- Semantic HTML structure
+
+## 🧑‍💻 Maintenance
+- To update, make changes locally, then run `npm run deploy`
+- Replace `public/favicon.ico` with your real favicon for branding
+- Update `arnob.jpg` for your profile image
 
 ---
 
